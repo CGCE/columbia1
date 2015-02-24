@@ -449,3 +449,29 @@ function control_form()
 		}
 	return true;
 	}
+	
+	
+$(document).ready(function(){
+	$(".CJDatePicker").datepicker();
+});
+
+$(function(){
+	$(".CJFormAddDate").click(function(){
+		$(this).closest("tr").clone().insertAfter($(this).closest("tr"));
+	});
+	
+	$("select").change(function(){
+		var id=$(this).attr("id");
+		if($("#tr_other_"+id).length>0){
+			if($(this).val()=="autre_precisez"){
+				$(this).attr("name","disabled_"+id);
+				$("#other_"+id).attr("name",id);
+				$("#tr_other_"+id).show();
+			}else{
+				$(this).attr("name",id);
+				$("#other_"+id).attr("name","other_"+id);
+				$("#tr_other_"+id).hide();
+			}			
+		}
+	});
+});

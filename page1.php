@@ -1,36 +1,40 @@
 <?php
-$prg_list=Array();
-$prg_list[]="Academic Year Abroad";
-$prg_list[]="AARO";
-$prg_list[]="Association Française des Femmes Diplomées des Universités";
-$prg_list[]="COFRA";
-$prg_list[]="Columbia Architecture Program";
-$prg_list[]="Columbia-Penn Undergraduate Programs";
-$prg_list[]="Columbia Global Centers | Europe";
-$prg_list[]="Columbia Masters in French Cultural Studies in a Global Setting";
-$prg_list[]="Dartmouth College";
-$prg_list[]="EHESP / MPH";
-$prg_list[]="EUSA, Intership program";
-$prg_list[]="Hamilton College";
-$prg_list[]="Hollins College";
-$prg_list[]="La Dive Note";
-$prg_list[]="Sarah Lawrence College";
-$prg_list[]="Smith College";
-$prg_list[]="Southern Methodist University";
-$prg_list[]="Textes et Voix";
-$prg_list[]="The American Club of Paris";
-$prg_list[]="University of Delaware";
-$prg_list[]="University of Kent";
-$prg_list[]="UNSDSN";
-$prg_list[]="Vassar-Wesleyan";
-sort($prg_list);
+/*
+echo "<div id='page1'>\n";
+echo "<table>\n";
 
+$f->p("intro1");
+$f->separator();
+
+$f->h("project");
+$f->inputText("CUGlobalCenter",true);
+$f->inputText("school",true);
+$f->inputText("programTitle",true);
+$f->inputText("programProject",true);
+$f->inputText("costEstimate",true);
+$f->inputDates("beginningDate",true);
+$f->inputDates("endingDate",true);
+
+$f->separator();
+$f->h("organizer");
+$f->inputText("organizer",true);
+$f->inputText("firstname",true);
+$f->inputText("lastname",true);
+$f->inputText("courriel",true);
+
+$f->separator();
+$f->h("roomReserved");
+$f->select("roomReserved","grandeSalle,salleConference,autre_precisez",true);
+
+/*
 echo <<<EOD
-<div id='page1'>
+<tr><td colspan='3'>
+<hr/>
 <h2>{$lang['dates_contacts']}</h2>
 <br/>
+</td></tr>
 
-<table>
+
 <tr>
 <td><b>{$lang['evenement']} *</b></td>
 <td colspan='2'><input type='text' name='titre' id='titre' maxlength='100' /></td>
@@ -49,8 +53,7 @@ for($j=1;$j<7;$j++)
 	<td>
 	<input type='text' style='width:150px;' name='date$j' value='{$lang['date_format']}' onfocus='date_focus(this);' onblur='date_blur(this);' />
 	<a href='javascript:calendrier("date$j");'><img src='../img/calendrier.gif' border='0' alt='date$j' id='date{$j}_img' /></a>
-	</td>
-	<td>
+
 	{$lang['heure1']}
 	<select name='debut$j'>
 	<option value=''>&nbsp;</option>
@@ -232,4 +235,7 @@ echo <<<EOD
 </table>
 </div>
 EOD;
+*/
 ?>
+</table>
+</div>
